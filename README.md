@@ -39,7 +39,7 @@ Example:
 To install py-couchdb, simply:
 
 ```bash
-pip install pycouchdb
+pip install https://github.com/feiloo/py-couchdb.git
 ```
 
 ## Documentation
@@ -49,7 +49,13 @@ Documentation is available at http://pycouchdb.readthedocs.org.
 
 ## Test
 
-To test py-couchdb, simply run:
+To test py-couchdb locally, start a couchdb with the url: http://admin:password@localhost:5984.
+
+You can install [podman](https://podman.io/) and use `scripts/start_couchdb_container.sh` and `scripts/stop_couchdb_container.sh`.
+
+Install [poetry](https://python-poetry.org/docs/basic-usage/#project-setup) and run `poetry install`.
+
+Then simply run:
 
 ``` bash
 pytest -v --doctest-modules --cov pycouchdb
